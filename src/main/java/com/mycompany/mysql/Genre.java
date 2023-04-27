@@ -16,4 +16,13 @@ public class Genre {
         this.genreId = pId;
         this.genreName = pName;
     }
+    
+    //setters---------------------
+    void setName(String pName){
+        this.genreName = pName;
+    }
+    
+    void setId(int id){
+        this.genreId = id;
+    }
 }

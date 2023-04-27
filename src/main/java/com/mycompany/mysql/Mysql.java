@@ -16,11 +16,24 @@ import java.sql.*;
 public class Mysql {
     public static void main(String[] args) {
         AdminGenre adminGenre = new AdminGenre();
-        Genre newGenre = new Genre(1,"hiplife");
+        Genre newGenre = new Genre(7,"hiplife");
         
         try{
-            int rowsAffected = adminGenre.insertGenre(newGenre);
-            System.out.println(rowsAffected + " row(s) inserted.");
+            // insert------------------------------
+//          int rowsAffected = adminGenre.insertGenre(newGenre);
+//          System.out.println(rowsAffected + " row(s) inserted.");
+//            adminGenre.getAll();
+            
+            //update--------------------------------
+//            newGenre.setName("Wildlive");
+//            adminGenre.updateGenre(newGenre);
+//            adminGenre.getAll();
+            
+            //delete--------------------------------
+//            adminGenre.deleteGenre(newGenre.genreId);
+            adminGenre.getAll();
+            newGenre.setId(8);
+            adminGenre.deleteGenre(newGenre.genreId);
             adminGenre.getAll();
         }catch(SQLException e){
             System.err.println("Error: " + e.getMessage());

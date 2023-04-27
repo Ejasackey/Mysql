@@ -37,23 +37,23 @@ public class AdminGenre {
         }
     }
     
-    public void updateGenre(Genre genre){
+    public void updateGenre(Genre genre)throws SQLException {
         try{
-            String updateQuery = String.format("UPDATE genres SET name = '%s' WHERE id = %d",genre.genreName, genre.genreId);
+            String updateQuery = String.format("UPDATE genres SET genre_name = '%s' WHERE genre_id = %d",genre.genreName, genre.genreId);
             int rowsAffected = stmt.executeUpdate(updateQuery);
             System.out.println(rowsAffected + " row(s) inserted.");
         } catch(SQLException e){
-            System.err.println("Error: " + e.getMessage());
+            throw e;
         }
     }
     
-    public void deleteGenre(int genreId) {
+    public void deleteGenre(int genreId) throws SQLException {
         try{
-            String deleteQuery = String.format("DELETE FROM genres WHERE id = %d", genreId);
+            String deleteQuery = String.format("DELETE FROM genres WHERE genre_id = %d", genreId);
             int rowsAffected = stmt.executeUpdate(deleteQuery);
             System.out.println(rowsAffected + " row(s) deleted.");
         } catch(SQLException e){
-            System.err.println("Error: " + e.getMessage());
+            throws e;
         }
     }
     
