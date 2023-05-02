@@ -22,7 +22,7 @@ public class Mysql {
             // insert------------------------------
 //          int rowsAffected = adminGenre.insertGenre(newGenre);
 //          System.out.println(rowsAffected + " row(s) inserted.");
-//            adminGenre.getAll();
+//          adminGenre.getAll();
             
             //update--------------------------------
 //            newGenre.setName("Wildlive");
@@ -30,10 +30,8 @@ public class Mysql {
 //            adminGenre.getAll();
             
             //delete--------------------------------
-//            adminGenre.deleteGenre(newGenre.genreId);
-            adminGenre.getAll();
-            newGenre.setId(8);
-            adminGenre.deleteGenre(newGenre.genreId);
+            newGenre.setId(6);
+            adminGenre.deleteGenre(newGenre.getGenreId());
             adminGenre.getAll();
         }catch(SQLException e){
             System.err.println("Error: " + e.getMessage());

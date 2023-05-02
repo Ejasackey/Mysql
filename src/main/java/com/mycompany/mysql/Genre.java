@@ -9,8 +9,10 @@ package com.mycompany.mysql;
  * @author EJAS
  */
 public class Genre {
-    int genreId;
-    String genreName;
+    private int genreId;
+    private String genreName;
+    
+    public Genre() {}
     
     public Genre(int pId,String pName){
         this.genreId = pId;
@@ -25,4 +27,15 @@ public class Genre {
     void setId(int id){
         this.genreId = id;
     }
+    
+    //getters---------------------
+    public int getGenreId() {
+        return genreId;
+    }
+
+    public String getGenreName() {
+        return genreName;
+    }
+    
+    
 }

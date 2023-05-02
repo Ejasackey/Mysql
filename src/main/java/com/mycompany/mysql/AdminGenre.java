@@ -53,7 +53,7 @@ public class AdminGenre {
             int rowsAffected = stmt.executeUpdate(deleteQuery);
             System.out.println(rowsAffected + " row(s) deleted.");
         } catch(SQLException e){
-            throws e;
+            throw e;
         }
     }
     
