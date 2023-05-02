@@ -33,6 +33,7 @@ public class Mysql {
             newGenre.setId(6);
             adminGenre.deleteGenre(newGenre.getGenreId());
             adminGenre.getAll();
+            
         }catch(SQLException e){
             System.err.println("Error: " + e.getMessage());
         }

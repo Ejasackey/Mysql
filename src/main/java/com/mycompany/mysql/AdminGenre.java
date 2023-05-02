@@ -28,7 +28,7 @@ public class AdminGenre {
     
     public int insertGenre(Genre genre)throws SQLException {
         try{
-            String insertQuery = String.format("INSERT INTO genres (genre_name) VALUES ('%s')", genre.genreName);
+            String insertQuery = String.format("INSERT INTO genres (genre_name) VALUES ('%s')", genre.getGenreName());
             int rowsAffected = stmt.executeUpdate(insertQuery);
             return rowsAffected;
         } catch(SQLException e){
@@ -39,7 +39,7 @@ public class AdminGenre {
     
     public void updateGenre(Genre genre)throws SQLException {
         try{
-            String updateQuery = String.format("UPDATE genres SET genre_name = '%s' WHERE genre_id = %d",genre.genreName, genre.genreId);
+            String updateQuery = String.format("UPDATE genres SET genre_name = '%s' WHERE genre_id = %d",genre.getGenreName(), genre.getGenreName());
             int rowsAffected = stmt.executeUpdate(updateQuery);
             System.out.println(rowsAffected + " row(s) inserted.");
         } catch(SQLException e){
